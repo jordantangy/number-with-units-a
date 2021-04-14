@@ -21,7 +21,7 @@ int main() {
   NumberWithUnits a{2, "km"};   // 2 kilometers
   cout << a << endl;           // Prints "2[km]".
   cout << (-a) << endl;    // Prints "-2[km]"
-  cout << (a*3) << endl;    // Prints "6[km]"
+  cout << (3*a) << endl;    // Prints "6[km]"
 
   NumberWithUnits b{300, "m"};  // 300 meters
   cout << (a+b) << endl;   // Prints "2.3[km]". Note: units are determined by first number (a).
@@ -39,7 +39,7 @@ int main() {
   cout << a << endl;   // Prints "1700[kg]". Note that a has changed.
 
   try {
-    cout << (a+b) << endl;  
+    cout << (a+b) << endl;
   } catch (const std::exception& ex) {
     cout << ex.what() << endl; // Prints "Units do not match - [m] cannot be converted to [kg]"
   }

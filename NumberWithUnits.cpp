@@ -1,56 +1,58 @@
 #include <iostream>
 #include "NumberWithUnits.hpp"
+#include <stdexcept>
 using namespace ariel;
 
-NumberWithUnits& NumberWithUnits::operator+(NumberWithUnits& other){
-    return *this;
+
+NumberWithUnits& NumberWithUnits::operator+(const NumberWithUnits& other) const{
+    // if(this->unit != other.unit ){
+    //   throw invalid_argument("Units do not match ["+this->unit+"] cannot be converted to ["+other.unit+"]");
+    // }
+    NumberWithUnits *temp = new NumberWithUnits();
+    return *temp;
 }
-NumberWithUnits&  NumberWithUnits::operator+=(NumberWithUnits other){
-    return *this;
+NumberWithUnits&  NumberWithUnits::operator+=(const NumberWithUnits& other) const{
+    NumberWithUnits *temp = new NumberWithUnits();
+    return *temp;
 }
 NumberWithUnits&  NumberWithUnits::operator+(){
     return *this;
 }
-NumberWithUnits&  NumberWithUnits::operator-(NumberWithUnits& other){
-    return *this;
+NumberWithUnits&  NumberWithUnits::operator-(const NumberWithUnits& other) const{
+    NumberWithUnits *temp = new NumberWithUnits();
+    return *temp;
 }
-NumberWithUnits&  NumberWithUnits::operator-=(NumberWithUnits other){
-    return *this;
+NumberWithUnits&  NumberWithUnits::operator-=(const NumberWithUnits& other) const{
+    NumberWithUnits *temp = new NumberWithUnits();
+    return *temp;
 }
 NumberWithUnits&  NumberWithUnits::operator-(){
     return *this;
 }
-NumberWithUnits&  NumberWithUnits::operator++(){
+NumberWithUnits&  NumberWithUnits::operator++(int) {
     return *this;
 }
-NumberWithUnits&  NumberWithUnits::operator--(){
+NumberWithUnits&  NumberWithUnits::operator--(int){
     return *this;
 }
-NumberWithUnits&  NumberWithUnits::operator<(NumberWithUnits& other){
-    return *this;
+bool  NumberWithUnits::operator<(const NumberWithUnits& other) const{
+    return true;
 }
-NumberWithUnits&  NumberWithUnits::operator<=(NumberWithUnits& other){
-    return *this;
+bool  NumberWithUnits::operator<=(const NumberWithUnits& other) const{
+    return true;
 }
-NumberWithUnits&  NumberWithUnits::operator>(NumberWithUnits& other){
-    return *this;
+bool  NumberWithUnits::operator>(const NumberWithUnits& other) const{
+    return true;
 }
-NumberWithUnits&  NumberWithUnits::operator>=(NumberWithUnits other){
-    return *this;
+bool  NumberWithUnits::operator>=(const NumberWithUnits& other) const{
+    return true;
 }
-NumberWithUnits&  NumberWithUnits::operator==(NumberWithUnits other){
-    return *this;
+bool NumberWithUnits::operator==(const NumberWithUnits& other) const {
+    return true;
 }
-NumberWithUnits&  NumberWithUnits::operator!=(NumberWithUnits& other){
-    return *this;
+bool NumberWithUnits::operator!=(const NumberWithUnits& other) const{
+    return true;
 }
-ostream& operator<<(ostream& os,NumberWithUnits& other){
-    
-    return os;
+NumberWithUnits& ariel::operator*(double num,NumberWithUnits& nwu){
+    return nwu;
 }
-istream& operator>>(istream& is,NumberWithUnits& other){
-    return is;
-}
-NumberWithUnits& NumberWithUnits::operator*(int num){
-    return *this;
-} 
