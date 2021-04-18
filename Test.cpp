@@ -76,7 +76,7 @@ TEST_CASE("computational operators"){
     CHECK(-a == NumberWithUnits{-1,"km"});
     CHECK(+a == NumberWithUnits{1,"km"});
     //++
-    CHECK(a++ == NumberWithUnits{2,"km"});
+    CHECK(a-- == NumberWithUnits{2,"km"});
     CHECK(a-- == NumberWithUnits{0,"km"});
     NumberWithUnits f{15,"mg"};
     f++;
