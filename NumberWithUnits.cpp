@@ -5,9 +5,6 @@ using namespace ariel;
 
 
 NumberWithUnits& NumberWithUnits::operator+(const NumberWithUnits& other) const{
-    // if(this->unit != other.unit ){
-    //   throw invalid_argument("Units do not match ["+this->unit+"] cannot be converted to ["+other.unit+"]");
-    // }
     NumberWithUnits *temp = new NumberWithUnits();
     return *temp;
 }

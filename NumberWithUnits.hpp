@@ -21,6 +21,7 @@ namespace ariel{
         NumberWithUnits& operator-();
         NumberWithUnits& operator++(int);
         NumberWithUnits& operator--(int);
+        bool UnitExists(const string unit) const;
         bool operator<(const NumberWithUnits& other) const;
         bool operator<=(const NumberWithUnits& other) const;
         bool operator>(const NumberWithUnits& other) const;
